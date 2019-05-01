@@ -15,7 +15,7 @@ public class View {
 	
 	  public String displayItemInfo(ItemDTO item, int quantity){
 	        return "Item scanned: (x" + quantity + ")\n" + item.toDisplay(quantity) + "\nTotal: " + controller.getCurrentTotal() +
-	        		"\nIn Basket" + "\n--------------------\n" + this.controller.currentBasket();
+	        		"\nIn Basket" + "\n*********************\n" + this.controller.currentBasket();
 	  }
 
 	  public String displayTotal(double amountDue){
@@ -38,9 +38,9 @@ public class View {
 	        System.out.println(
 	                "\n\n\n\n\n\n\n" +
 	                "CURRENT DISPLAY:\n" +
-	                "--------------------\n" +
+	                "*********************\n" +
 	                currentDisplay +
-	                "\n--------------------"
+	                "\n*********************"
 	        );
 	    }
 	    private void finishSale(Scanner scan){

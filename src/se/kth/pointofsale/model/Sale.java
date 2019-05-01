@@ -18,6 +18,13 @@ public class Sale {
         this.inventory = inv;
     }
     
+    /**
+     * Completes the sale by adding the payment to the 
+     * saleInfo and removing the items from the stock.
+     * prints the receipt and returns the change. 
+     * @param payment
+     * @return change
+     */
     public double completeSale(double payment){
     	saleInfo.setAmountPaid(payment);
     	double change = saleInfo.getChange();
@@ -29,14 +36,14 @@ public class Sale {
         System.out.println(Printer.printReceipt(saleInfo));
         return change;
     }
+    
+    /*
+     * adds an item to the sale info
+     */
 	public void addToSale(ItemDTO item, int quantity){
         this.saleInfo.addItem(item, quantity);
     }
-	
-	public void payment(double pay){
-		this.saleInfo.setAmountPaid(pay);
-	}
-	
+
 	public String currentBasket(){
 		return this.saleInfo.toString();
 	}

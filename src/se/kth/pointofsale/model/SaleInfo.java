@@ -14,6 +14,15 @@ public class SaleInfo{
     	this.items = new HashMap<>();
     }
     
+    /**
+     * Adds and item to the basket
+     * if the item is already in the basket 
+     * the quantity of the item is increased.
+     *  
+     * @param item
+     * @param quantity
+     */
+    
     void addItem(ItemDTO item, int quantity){
         if(!items.containsKey(item)) {
             this.items.put(item, quantity);
@@ -23,6 +32,12 @@ public class SaleInfo{
         this.total += (item.getPrice() * quantity);
     }
     
+    /**
+     * 
+     * Itterates over the map and extracts the 
+     * average vat of all the purchased items
+     * 
+     **/
     public double getTotalVat(){
     	double totalTaxed = 0; 
     	for (Map.Entry<ItemDTO, Integer> item : items.entrySet()) {

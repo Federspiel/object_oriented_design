@@ -43,14 +43,6 @@ public class Controller {
     	return currentSale.getCurrentTotal();
     }
     
-    /**
-     * Returns amount of change to give to customer
-     * Removes the purchased items from the inventory and consumes any potential discounts
-     *
-     * @param payment double
-     * @return double
-     */
-
     public double completeSale(){
         return currentSale.getCurrentTotal();
     }
