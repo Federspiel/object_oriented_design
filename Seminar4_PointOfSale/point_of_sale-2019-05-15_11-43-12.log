@@ -1,0 +1,3 @@
+2019-maj-15 11:43:33: Exception was thrown: Item with identifier : 15 could not be found in registry.
+2019-maj-15 11:43:39: Exception was thrown: Could not get the ItemUI Message: Could not get item information, please contact an administrator
+Cause: Database is no longer responding.
